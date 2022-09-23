@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { Container } from './styles'
 
-const Song = () => {
+const Song = ({ currentSong }) => {
   return(
     <SongContainer>
-        <h1>Picture</h1>
-        <h1>Song Name</h1>
-        <h1>Artist</h1>
+    <img src={currentSong.cover}></img>
+        <h2>{currentSong.name}</h2>
+        <h3>{currentSong.artist}</h3>
         
     </SongContainer>
   )
@@ -14,6 +14,18 @@ const Song = () => {
 const SongContainer = styled(Container)`
   min-height: 60vh;
   background-color: white;
+  img {
+    width: 20%;
+    border-radius: 50%;
+  }
+
+  h2 {
+    padding: 3rem 1rem 1rem 1rem;
+
+  }
+  h3 {
+    font-size: 1rem;
+  }
 `
 
 export default Song

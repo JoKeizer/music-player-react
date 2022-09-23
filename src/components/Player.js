@@ -1,4 +1,6 @@
 
+import React, {useRef} from "react"
+
 import styled from 'styled-components';
 import { Container } from './styles'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,7 +8,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 
-const Player = () => {
+const Player = ({currentSong, isPlaying, setIsPlaying}) => {
+
+  const audioRef = useRef(null);
+
+  const playSongHandler = () => {
+    // console.log(audioRef.current);
+    
+    if(isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(!isPlaying)
+    } else {
+      audioRef.current.play();
+      setIsPlaying(!isPlaying)
+
+    }
+   
+
+  }
   return(
     <PlayerContainer>
       <TimeControl>
@@ -16,9 +35,10 @@ const Player = () => {
       </TimeControl>
       <PlayControl>
         <StyledFontAwesomeIcon size="4x" icon={faAngleLeft}/>         
-        <StyledFontAwesomeIcon size="2x" icon={faPlay}/>         
+        <StyledFontAwesomeIcon onClick={playSongHandler} size="2x" icon={faPlay}/>         
         <StyledFontAwesomeIcon size="2x" icon={faAngleRight}/>         
       </PlayControl>
+      <audio ref={audioRef} src={currentSong.audio}></audio>
     </PlayerContainer>
   )
 }
