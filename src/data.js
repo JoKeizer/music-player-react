@@ -43,8 +43,7 @@ function chillHop() {
     },
     {
       name: "Reflection",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
+      cover: "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
       artist: "Swørn",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9228",
       color: ["#CD607D", "#c94043"],
@@ -74,7 +73,7 @@ function chillHop() {
     {
       name: "Highland Park After Dark",
       cover:
-        "https://i.scdn.co/image/ab67616d0000b27365390185a80cc80ec325d4cbab67616d0000b27365390185a80cc80ec325d4cb",
+      "https://chillhop.com/wp-content/uploads/2022/09/b7f06cec8a0bef89429dd85f68bb718a31289ec6-300x300.jpg",
       artist: "Ruck P",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=41931",
       color: ["#A67948", "#293731"],

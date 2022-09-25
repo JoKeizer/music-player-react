@@ -5,7 +5,22 @@ const GlobalStyle = createGlobalStyle`
         margin:0;
         padding:0;
         box-sizing:border-box;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(155, 155, 155, 0.5) transparant;
     }
+
+    *::-webkit-scrollbar {
+        width: 5px;
+    }
+    *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: rgba(155, 155, 155, 0.7);
+        border-radius: 20px;
+        border: transparent;
+    }
+
     html{
         @media (max-width: 1500px) {
             font-size: 85%;
@@ -14,10 +29,8 @@ const GlobalStyle = createGlobalStyle`
     body{
         background: white;
         color: black;
-        font-family: 'Inter', sans-serif;
-        
-    }
-       
+        font-family: 'Oswald', sans-serif;
+
     }
     button{
         font-family: 'Inter', sans-serif;
@@ -25,21 +38,28 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.1rem;
         cursor: pointer;
         padding: 1rem 2rem;
-        border: 3px solid #23d997;
+        border: 3px solid black;
         background: transparent;
-        color: white;
+        color: black;
         transition: all 0.5s ease;
         &:hover {
-        background: #23d997;
-        color: white;
+            background: rgb(65, 65, 65);
+            color: white;
+        }
+        &.library-active {
+            background: rgb(65, 65, 65);
+            color: white;
         }
     }
     h1 {
       color: black;
+      font-weight: 900;
     }
     h2{
         font-weight: lighter;
         font-size: 4rem;
+        font-weight: 900;
+
     }
     h3{
         color: black;
@@ -60,5 +80,20 @@ const GlobalStyle = createGlobalStyle`
     a{
         font-size: 1.1.rem;
     }
+    .selected {
+        background-color: pink;
+    }
+
+    input[type="range"]:focus {
+        outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 16px;
+        width: 16px;
+        background: black;
+
+    }
+
 `;
 export default GlobalStyle;
