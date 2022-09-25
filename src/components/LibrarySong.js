@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Container } from './styles'
-// import { device } from './device';
+import { device } from './device';
 
 // import { playAudio } from './util';
 const LibrarySong = ({
@@ -69,13 +69,17 @@ const SongContainer = styled(Container)`
 
   h2 {
     padding: 3rem 1rem 1rem 1rem;
-
   }
   h3 {
     font-size: 1rem;
   }
 
+  @media ${device.mobileM} { 
+    h2 {
+      font-size: 2rem;
+    }
 
+  }
 
 `
 const SongDescription = styled.div`

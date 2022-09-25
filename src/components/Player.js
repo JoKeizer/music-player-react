@@ -6,7 +6,7 @@ import { Container } from './styles'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faPlay, faAngleLeft, faAngleRight, faPause } from "@fortawesome/free-solid-svg-icons";
-// import { device } from './device';
+import { device } from './device';
 
 const Player = ({
   isPlaying,
@@ -128,6 +128,10 @@ width: 50%;
 display: flex;
 flex-direction: column;
 position: relative;
+
+@media ${device.mobileS} { 
+  width: 90%;
+}
 input {
   width: 100%;
   padding: 1rem 0rem;
@@ -145,7 +149,9 @@ justify-content: space-between;
 align-items: center;
 padding: 1rem;
 width: 30rem;
-
+@media ${device.mobileS} { 
+  width: 22rem;
+}
 svg {
   cursor: pointer;
 }

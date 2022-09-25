@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Container } from './styles'
 
+import { device } from './device';
+
 const Song = ({ currentSong }) => {
   return(
     <SongContainer>
@@ -25,6 +27,12 @@ const SongContainer = styled(Container)`
   }
   h3 {
     font-size: 1rem;
+  }
+
+  @media ${device.mobileM} { 
+    h2 {
+      font-size: 2rem;
+    }
   }
 `
 
