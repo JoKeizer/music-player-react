@@ -30,6 +30,8 @@ const SongContainer = styled(Container)`
   }
 
   @media ${device.mobileM} { 
+    min-height: 50vh;
+
     h2 {
       font-size: 2rem;
     }
